@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Node / Next.js
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/coverage/
+*.tsbuildinfo
+
+# Go
+*.exe
+*.test
+*.out
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
