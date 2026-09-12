@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  backend:
+    image: promptsieve-backend:latest
+    container_name: promptsieve-backend
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  frontend:
+    image: promptsieve-frontend:latest
+    container_name: promptsieve-frontend
+    ports:
+      - "3005:3000"
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    restart: unless-stopped
